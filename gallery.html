@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">My Portfolio</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Gallery</h1>
+        <!-- <div class="toggle-buttons">
+            <button id="sketchesBtn">Sketches</button>
+            <button id="photographsBtn">Photographs</button>
+        </div> -->
+        <label class="switch">
+            <input type="checkbox" id="checkbox">
+            <span class="slider"></span>
+          </label>
+
+        <div id="sketches" class="gallery-section">
+            <img src="images/sketch/IMG_20210616_025751.jpg" alt="Sketch 1" onclick="openModal(this)" loading="lazy">
+            <img src="images/sketch/IMG_20210914_174254-01.jpg" alt="Sketch 2" onclick="openModal(this)" loading="lazy">
+            <img src="images/sketch/IMG_20211006_142048-01.jpg" alt="Sketch 3" onclick="openModal(this)" loading="lazy">
+            <img src="images/sketch/IMG_20211202_204921_433.jpg" alt="Sketch 4" onclick="openModal(this)" loading="lazy">
+            <img src="images/sketch/IMG_20211211_000916_435.jpg" alt="Sketch 5" onclick="openModal(this)" loading="lazy">
+            <!-- <img src="images/sketch/IMG_20211212_000916_435.jpg" alt="Sketch 6" onclick="openModal(this)"> -->
+        </div>
+        
+        <div id="photographs" class="gallery-section" style="display:none;">
+            <img src="images/photos/IMG20220613111720.jpg" alt="Photo 1" onclick="openModal(this)" loading="lazy">
+            <img src="images/photos/IMG20220902142611-01.jpg" alt="Photo 2" onclick="openModal(this)" loading="lazy">
+            <img src="images/photos/IMG20230323191908.jpg" alt="Photo 3" onclick="openModal(this)" loading="lazy">
+            <img src="images/photos/IMG20230420174114.jpg" alt="Photo 4" onclick="openModal(this)" loading="lazy">
+            <img src="images/photos/IMG20230929033641-04.jpeg" alt="Photo 5" onclick="openModal(this)" loading="lazy">
+        </div>
+        
+        <!-- Modal Structure -->
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 My Portfolio</p>
+    </footer>
+
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
